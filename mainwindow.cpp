@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include"purchasedialog.h"
 #include"transactiondialog.h"
+#include"login_form.h"
 #include<QString>
 #include<QFileDialog>
 #include<QDebug>
@@ -393,7 +394,11 @@ MainWindow::MainWindow(QWidget *parent)
           QMessageBox::information(this,"提示","请先打开资源文件");
     });
 
-
+    LoginForm login;
+    connect(&login, &LoginForm::loggedIn, this, [=]() {/* model->setEmployeeNumber(number);*/ });
+    int res = login.exec();
+    if (res == QDialog::Accepted)
+        show();
 
 }
 

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>assets/close.png</file>
+        <file>assets/minus.png</file>
+        <file>assets/user.png</file>
+        <file>assets/password.png</file>
+        <file>assets/add.png</file>
+        <file>assets/ashbin.png</file>
+        <file>assets/picture.png</file>
+    </qresource>
+    <qresource prefix="/imgs">
+        <file>assets/jiaran.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>accounts.txt</file>
+    </qresource>
+</RCC>

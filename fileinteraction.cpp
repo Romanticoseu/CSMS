@@ -20,7 +20,7 @@ bool FileInteraction::ReadInformationFromFile(const QString &fileAddress)
     sales.clear();
     QString id;
     stream>>id;
-    if (id!="ID20200912")
+    if (id!="ID20220817")
         return false;
     while(!stream.atEnd())
     {
@@ -51,7 +51,7 @@ void FileInteraction::WriteInformationToFile(const QString &fileAddress)
     file.open(QIODevice::WriteOnly| QIODevice::Text);
     QTextStream stream(&file);//用文本流写入文件
     stream.setCodec("UTF-8");//设置编码格式
-    stream<<"ID20200912"<<'\n';
+    stream<<"ID20220817"<<'\n';
     for (int i=0;i<commodity.size();i++)
     {
         stream<<"1"<<' ';

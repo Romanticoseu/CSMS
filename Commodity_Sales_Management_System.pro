@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     commodityinformation.cpp \
     fileinteraction.cpp \
+    login_form.cpp \
     main.cpp \
     mainwindow.cpp \
     purchasedialog.cpp \
@@ -20,12 +21,14 @@ SOURCES += \
 HEADERS += \
     commodityinformation.h \
     fileinteraction.h \
+    login_form.h \
     mainwindow.h \
     purchasedialog.h \
     salesinformation.h \
     transactiondialog.h
 
 FORMS += \
+    login_form.ui \
     mainwindow.ui \
     purchasedialog.ui \
     transactiondialog.ui
@@ -35,4 +38,5 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-RESOURCES +=
+RESOURCES += \
+    CSMS.qrc \
